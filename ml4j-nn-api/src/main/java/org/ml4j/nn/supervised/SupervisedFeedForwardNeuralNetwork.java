@@ -69,4 +69,15 @@ public interface SupervisedFeedForwardNeuralNetwork extends
   public CostAndGradients getCostAndGradients(NeuronsActivation inputActivations, 
           NeuronsActivation desiredOutputActivations, 
           FeedForwardNeuralNetworkContext trainingContext);
+  
+  /**
+   * Calculates the average cost from the cost function given the inputs and desired outputs.
+   * 
+   * @param inputActivations The inputs.
+   * @param desiredOutputActivations The desired outputs.
+   * @param trainingContext The training context.
+   * @return The average cost.
+   */
+  public double getAverageCost(NeuronsActivation inputActivations,
+      NeuronsActivation desiredOutputActivations, FeedForwardNeuralNetworkContext trainingContext);
 }

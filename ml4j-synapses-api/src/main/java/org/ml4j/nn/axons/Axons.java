@@ -84,6 +84,11 @@ public interface Axons<L extends Neurons, R extends Neurons, A extends Axons<L, 
   Matrix getDetachedConnectionWeights();
   
   /**
+   * @return The connection weights Matrix for these Axons.
+   */
+  Matrix getConnectionWeights();
+  
+  /**
    * @return A deep copy of these Axons.
    */
   A dup();
